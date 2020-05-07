@@ -1,4 +1,5 @@
 using System;
+using Internal;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Webapp.Controllers {
@@ -22,6 +23,25 @@ namespace Webapp.Controllers {
             ViewBag.one = numberOne;
             ViewBag.two = numberTwo;
             return View ();
+
+            try {
+                if (ViewBag.first > ViewBag.second) {
+
+                    Console.WriteLine ($"The number {ViewBag.one} with Square root {ViewBag.result1} has a higher square root than {ViewBag.two} with square root {ViewBag.result2}");
+
+                } else if (ViewBag.second > ViewBag.first) {
+
+                    Console.WriteLine ($"The number {ViewBag.two} with Square root {ViewBag.result2} has a higher square root than {ViewBag.one} with square root {ViewBag.result1}");
+
+                } else if (ViewBag.first == ViewBag.Second && ViewBag.second == ViewBag.one) {
+
+                    Console.WriteLine ($"The number { ViewBag.one } with Square root { ViewBag.result1 } has the same Value with { ViewBag.two } with square root {ViewBag.result2} PLEASE ENTER DIFFERENT VALUES");
+                }
+            } catch (FormatException) {
+                Console.WriteLine ($"WRONG INPUT PLEASE ENTER A POSITIVE VALUE!!");
+            }
+             return View ();
+
         }
     }
 }

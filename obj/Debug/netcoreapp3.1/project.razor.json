@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\E7270\\source\\repo\\Webapp\\Webapp.csproj",
+  "FilePath": "c:\\Users\\E7270\\source\\repo\\Webapp1\\Webapp\\Webapp.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -20521,48 +20521,48 @@
   "RootNamespace": "Webapp",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\E7270\\source\\repo\\Webapp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "c:\\Users\\E7270\\source\\repo\\Webapp1\\Webapp\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\E7270\\source\\repo\\Webapp\\Views\\web\\SquareRoot.cshtml",
-      "TargetPath": "Views\\web\\SquareRoot.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\E7270\\source\\repo\\Webapp\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\E7270\\source\\repo\\Webapp\\Views\\_ViewStart.cshtml",
+      "FilePath": "c:\\Users\\E7270\\source\\repo\\Webapp1\\Webapp\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\E7270\\source\\repo\\Webapp\\Views\\Home\\NewPage.cshtml",
-      "TargetPath": "Views\\Home\\NewPage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\E7270\\source\\repo\\Webapp\\Views\\Shared\\_Layout.cshtml",
+      "FilePath": "c:\\Users\\E7270\\source\\repo\\Webapp1\\Webapp\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\E7270\\source\\repo\\Webapp\\Views\\Home\\Privacy.cshtml",
+      "FilePath": "c:\\Users\\E7270\\source\\repo\\Webapp1\\Webapp\\Views\\Web\\SquareRoot.cshtml",
+      "TargetPath": "Views\\Web\\SquareRoot.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\E7270\\source\\repo\\Webapp1\\Webapp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\E7270\\source\\repo\\Webapp1\\Webapp\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\E7270\\source\\repo\\Webapp\\Views\\_ViewImports.cshtml",
+      "FilePath": "c:\\Users\\E7270\\source\\repo\\Webapp1\\Webapp\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\E7270\\source\\repo\\Webapp\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FilePath": "c:\\Users\\E7270\\source\\repo\\Webapp1\\Webapp\\Views\\Home\\NewPage.cshtml",
+      "TargetPath": "Views\\Home\\NewPage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\E7270\\source\\repo\\Webapp1\\Webapp\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     }
   ],
