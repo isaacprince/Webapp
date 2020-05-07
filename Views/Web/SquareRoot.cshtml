@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "SquareRoot";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>   
+</div>
+<div>
+@{  try {
+        if (ViewBag.first >  ViewBag.second)
+        {
+            <div>
+               <p> The number @ViewBag.one with Square root @ViewBag.result1 has a higher square root than @ViewBag.two with square root @ViewBag.result2 </p>
+            </div>
+
+        }
+         else if(ViewBag.second >  ViewBag.first)
+           {
+            <div>
+                 <p> The number @ViewBag.two with Square root @ViewBag.result2 has a higher square root than @ViewBag.one with square root @ViewBag.result1 </p>
+            </div>
+           }
+           else  if (ViewBag.first ==  ViewBag.Second && ViewBag.second ==  ViewBag.one )
+           {
+            <div>
+                <p> The number @ViewBag.one with Square root @ViewBag.result1 has the same Value with @ViewBag.two with square root @ViewBag.result2 , PLEASE ENTER DIFFERENT VALUES </p>
+          </div> 
+           }
+        
+    } catch (FormatException){
+        <div>
+            <p> WRONG INPUT PLEASE ENTER A POSITIVE VALUE!! </p>
+        </div> 
+
+    }
+
+}
+
+</div>
+
+<div>
+    <form asp-controller="WebController" asp-action="SquareRoot" method="POST">
+
+        <input type="number" placeholder= "First Number" name = "firstNumber"/>
+        <input type="number" placeholder= "Second Number" name = "secondNumber"/>
+        <button type = " submit">Submit</button> 
+
+    </form>
+    
+</div>
