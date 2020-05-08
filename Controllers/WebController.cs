@@ -22,7 +22,7 @@ namespace Webapp.Controllers {
             ViewBag.one = numberOne;
             ViewBag.two = numberTwo;
 
-            if (ViewBag.first != null || ViewBag.second != null) {
+            if (ViewBag.first != null && ViewBag.second != null) {
 
                 try {
                     if (ViewBag.first > ViewBag.second) {
