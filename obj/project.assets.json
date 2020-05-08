@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\E7270\\source\\repo\\Webapp\\Webapp.csproj",
+      "projectUniqueName": "C:\\Users\\E7270\\source\\repo\\Webapp1\\Webapp\\Webapp.csproj",
       "projectName": "Webapp",
-      "projectPath": "C:\\Users\\E7270\\source\\repo\\Webapp\\Webapp.csproj",
+      "projectPath": "C:\\Users\\E7270\\source\\repo\\Webapp1\\Webapp\\Webapp.csproj",
       "packagesPath": "C:\\Users\\E7270\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\E7270\\source\\repo\\Webapp\\obj\\",
+      "outputPath": "C:\\Users\\E7270\\source\\repo\\Webapp1\\Webapp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\E7270\\AppData\\Roaming\\NuGet\\NuGet.Config"

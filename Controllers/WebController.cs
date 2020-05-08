@@ -1,5 +1,4 @@
 using System;
-using Internal;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Webapp.Controllers {
@@ -11,7 +10,7 @@ namespace Webapp.Controllers {
         }
 
         [HttpPost]
-        public ActionResult SquareRoot (string firstNumber, string secondNumber) {
+        public IActionResult SquareRoot (string firstNumber, string secondNumber) {
             double numberOne = double.Parse (firstNumber);
             double numberTwo = double.Parse (secondNumber);
 
@@ -22,26 +21,29 @@ namespace Webapp.Controllers {
             ViewBag.second = result2;
             ViewBag.one = numberOne;
             ViewBag.two = numberTwo;
-            return View ();
 
-            try {
-                if (ViewBag.first > ViewBag.second) {
+            if (ViewBag.first && ViewBag.second != null) {
 
-                    Console.WriteLine ($"The number {ViewBag.one} with Square root {ViewBag.result1} has a higher square root than {ViewBag.two} with square root {ViewBag.result2}");
+                try {
+                    if (ViewBag.first > ViewBag.second) {
 
-                } else if (ViewBag.second > ViewBag.first) {
+                        Console.WriteLine ($"The number {ViewBag.one} with Square root {ViewBag.result1} has a higher square root than {ViewBag.two} with square root {ViewBag.result2}");
 
-                    Console.WriteLine ($"The number {ViewBag.two} with Square root {ViewBag.result2} has a higher square root than {ViewBag.one} with square root {ViewBag.result1}");
+                    } else if (ViewBag.second > ViewBag.first) {
 
-                } else if (ViewBag.first == ViewBag.Second && ViewBag.second == ViewBag.one) {
+                        Console.WriteLine ($"The number {ViewBag.two} with Square root {ViewBag.result2} has a higher square root than {ViewBag.one} with square root {ViewBag.result1}");
 
-                    Console.WriteLine ($"The number { ViewBag.one } with Square root { ViewBag.result1 } has the same Value with { ViewBag.two } with square root {ViewBag.result2} PLEASE ENTER DIFFERENT VALUES");
+                    } else if (ViewBag.first == ViewBag.Second && ViewBag.second == ViewBag.one) {
+
+                        Console.WriteLine ($"The number { ViewBag.one } with Square root { ViewBag.result1 } has the same Value with { ViewBag.two } with square root {ViewBag.result2} PLEASE ENTER DIFFERENT VALUES");
+                    }
+                } catch (FormatException) {
+                    Console.WriteLine ($"WRONG INPUT PLEASE ENTER A POSITIVE VALUE!!");
                 }
-            } catch (FormatException) {
-                Console.WriteLine ($"WRONG INPUT PLEASE ENTER A POSITIVE VALUE!!");
-            }
-             return View ();
 
+            }
+
+            return View ();
         }
     }
 }
