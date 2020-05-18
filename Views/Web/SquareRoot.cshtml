@@ -11,41 +11,91 @@
     <p>Enter your numbers</p>
     <form asp-controller="Web" asp-action="SquareRoot" method="POST">
 
-        <input type="number" placeholder= "First Number" name = "firstNumber"/>
-        <input type="number" placeholder= "Second Number" name = "secondNumber"/>
+        <input type="number"
+        asp-action="SquareRoot"
+        placeholder= "First Number" 
+        asp-controller="Web"
+        name = "FirstNumber"/>
+
+        <input type="number"
+         placeholder= "Second Number"
+         asp-action="SquareRoot"
+         asp-controller="Web"
+        name = "SecondNumber"/>
+          
         <button type = " submit">Calculate</button> 
 
     </form>    
 </div>
 
-@{
-            if (ViewBag.first != null && ViewBag.second != null) {
-                <div class = "text-center"></div>
 
-                try{
 
-                     if (ViewBag.first >  ViewBag.second) {
-                        
-                        <div class = "text-center">
-                             <p> The number @ViewBag.one with Square root @ViewBag.result1 has a higher square root than @ViewBag.two with square root @ViewBag.result2 </p>
-                        </div>
-                        }else if(ViewBag.second >  ViewBag.first){
-                         <div class = "text-center">
-                                 <p> The number @ViewBag.two with Square root @ViewBag.result2 has a higher square root than @ViewBag.one with square root @ViewBag.result1 </p>
-                         </div>
-                        }else  if (ViewBag.first ==  ViewBag.Second && ViewBag.second ==  ViewBag.one ) {
-                          <div class = "text-center">
-                              <p> The number @ViewBag.one with Square root @ViewBag.result1 has the same Value with @ViewBag.two with square root @ViewBag.result2 , PLEASE ENTER DIFFERENT VALUES </p>
-                          </div>
-                        } 
-                }catch (FormatException){
-                  <div>
-                      <p> WRONG INPUT PLEASE ENTER A POSITIVE VALUE!! </p>
-                   </div>
+@{ if (ViewBag.firstSqrt != null && ViewBag.secondSqrt != null)
+    {
+        <div class="text-center">
+            @{
+                if (@ViewBag.firstSqrt > @ViewBag.secondSqrt)
+                {
+                    <h3 class="text-success">
+                        The number @ViewBag.first with square root
+                        @ViewBag.firstSqrt has a higher square root
+                        than the number @ViewBag.second with
+                        square root @ViewBag.secondSqrt
+                    </h3>
                 }
+                else if (@ViewBag.secondSqrt > @ViewBag.first)
+                {
+                    <h3 class="text-success">
+                        The number @ViewBag.second with square root
+                        @ViewBag.secondSqrt has a higher square root
+                        than the number @ViewBag.first  with
+                        square root @ViewBag.firstSqrt
+                    </h3>
+                }
+                else if (@ViewBag.first == @ViewBag.secondSqrt)
+                {
+                    <h3 class="text-success">
+                        The number @ViewBag.first with square root
+                        @ViewBag.firstSqrt is equal to the number
+                        @ViewBag.second with square root @ViewBag.secondSqrt.
+                    </h3>
+                    <p class="text-success">Please try a different number!!!</p>
+                }
+
             }
+        </div>
+    }
+}
+
+@{ if (ViewBag.NegNumError != null)
+    {
+        <div class=" = text-center">
+            <h3 class="text-danger">
+                @ViewBag.NegNumError
+            </h3>
+        </div>
+    }
+}
 
 
-}    
+@{ if (ViewBag.errorMessageEmpty != null)
+    {
+        <div class=" = text-center">
+            <h3 class="text-danger">
+                @ViewBag.errorMessageEmpty
+            </h3>
+        </div>
+    }
+}
 
+
+@{ if (ViewBag.alphaError != null)
+    {
+        <div class=" = text-center">
+            <h3 class="text-danger">
+                @ViewBag.alphaError
+            </h3>
+        </div>
+    }
+}
 
