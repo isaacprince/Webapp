@@ -30,34 +30,34 @@
 
 
 
-@{ if (ViewBag.firstSqrt != null && ViewBag.secondSqrt != null)
+@{ if (ViewBag.first != null && ViewBag.second != null)
     {
         <div class="text-center">
             @{
-                if (@ViewBag.firstSqrt > @ViewBag.secondSqrt)
+                if (@ViewBag.first > @ViewBag.second)
                 {
                     <h3 class="text-success">
-                        The number @ViewBag.first with square root
-                        @ViewBag.firstSqrt has a higher square root
-                        than the number @ViewBag.second with
-                        square root @ViewBag.secondSqrt
+                        The number @ViewBag.one with square root
+                        @ViewBag.first has a higher square root
+                        than the number @ViewBag.two with
+                        square root @ViewBag.second
                     </h3>
                 }
-                else if (@ViewBag.secondSqrt > @ViewBag.first)
+                else if (@ViewBag.second > @ViewBag.first)
                 {
                     <h3 class="text-success">
-                        The number @ViewBag.second with square root
-                        @ViewBag.secondSqrt has a higher square root
-                        than the number @ViewBag.first  with
-                        square root @ViewBag.firstSqrt
+                        The number @ViewBag.two with square root
+                        @ViewBag.second has a higher square root
+                        than the number @ViewBag.one  with
+                        square root @ViewBag.first
                     </h3>
                 }
-                else if (@ViewBag.first == @ViewBag.secondSqrt)
+                else if (@ViewBag.first == @ViewBag.second)
                 {
                     <h3 class="text-success">
-                        The number @ViewBag.first with square root
-                        @ViewBag.firstSqrt is equal to the number
-                        @ViewBag.second with square root @ViewBag.secondSqrt.
+                        The number @ViewBag.one with square root
+                        @ViewBag.first is equal to the number
+                        @ViewBag.two with square root @ViewBag.second.
                     </h3>
                     <p class="text-success">Please try a different number!!!</p>
                 }
